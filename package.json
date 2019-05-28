@@ -16,7 +16,18 @@
     "url": "https://github.com/WildPastry/Granulosa/issues"
   },
   "homepage": "https://github.com/WildPastry/Granulosa#readme",
-  "dependencies": {
-    "gulp": "^4.0.2"
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-purge": "^3.0.9",
+    "gulp-livereload": "^4.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss-load-config": "^2.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "postcss-scss": "^2.0.0"
   }
 }

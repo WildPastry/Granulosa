@@ -1,0 +1,11 @@
+// SASS IMPORT
+@import 'variables';
+@import 'mixins';
+
+body {
+  background: #2b2b2b;
+}
+
+* {
+  @include reset(0, 0, border-box, none, none);
+}
