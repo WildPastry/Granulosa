@@ -12,7 +12,7 @@ Granulosa is a custom Wordpress theme, coded from scratch for educational purpos
 
 ## Development info
 
-**LESS** <br>
+**SASS** <br>
 **GULP** <br>
 **Post CSS** <br>
 **Autoprefixer** <br>
