@@ -1,0 +1,23 @@
+{
+  "name": "granulosa",
+  "version": "1.0.0",
+  "description": "Granulosa is a custom Wordpress theme, coded from scratch for educational purposes",
+  "bugs": {
+    "url": "https://github.com/WildPastry/Granulosa/issues"
+  },
+  "homepage": "https://github.com/WildPastry/Granulosa#readme",
+  "author": "Mike Parker",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "postcss-cli": "^6.0.1",
+    "postcss-focus-within": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "scripts": {
+    "build": "run-p \"build:*\"",
+    "watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
+  }
+}
