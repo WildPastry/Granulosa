@@ -1,10 +1,9 @@
-// MIXINS
-
-// CSS RESETS
-@mixin reset ($pad: null, $mar: null, $box: null, $deco: null, $listo: null) {
+/* MIXINS */
+@mixin reset($pad: null, $mar: null, $box: null, $deco: null, $listo: null) {
   padding: $pad;
   margin: $mar;
   box-sizing: $box;
-  text-decoration: $deco;
+                          -webkit-text-decoration: $deco;
+                                  text-decoration: $deco;
   list-style-type: $listo;
 }
