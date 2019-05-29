@@ -22,9 +22,11 @@ gulp.task('styles', function () {
   .pipe(livereload())
  });
 
- gulp.task('watch', function () {
+ gulp.task('watch', function (event) {
   livereload.listen();
-  gulp.watch('sass/**/*.scss', ['styles']);
+  gulp.watch('sass/**/*.scss', {
+		usePolling: true
+	}, gulp.series('styles'));
  });
 
  //LOAD TASKS
@@ -32,6 +34,7 @@ gulp.task('default',
 gulp.series('styles', 'watch')
 );
 
+// VARIATION ONE
 // gulp.task('autoprefixer', function () {
 //   var postscss      = require('postcss-scss');
 //   var sourcemaps   = require('gulp-sourcemaps');
@@ -44,6 +47,7 @@ gulp.series('styles', 'watch')
 //       .pipe(gulp.dest('./dest'));
 // });
 
+// VARIATION TWO
 // var postcss = require('gulp-postcss');
 // var gulp = require('gulp');
 // var autoprefixer = require('autoprefixer');
