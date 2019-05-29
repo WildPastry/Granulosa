@@ -1,0 +1,9 @@
+/* MIXINS */
+@mixin reset($pad: null, $mar: null, $box: null, $deco: null, $listo: null) {
+	padding: $pad;
+	margin: $mar;
+	box-sizing: $box;
+	-webkit-text-decoration: $deco;
+	        text-decoration: $deco;
+	list-style-type: $listo;
+}
