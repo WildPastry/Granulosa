@@ -13,7 +13,7 @@ function granulosa_add_theme_support()
   add_theme_support('wp-block-styles');
   add_theme_support('post-formats', array('text', 'image'));
 
-  // add default logo size
+  // add default size for custom logo
   $defaults = array(
     'flex-height' => true,
     'flex-width'  => true
