@@ -27,7 +27,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "postcss-load-config": "^2.0.0",
-    "postcss-preset-env": "^6.6.0",
-    "postcss-scss": "^2.0.0"
+    "postcss-preset-env": "^6.6.0"
   }
 }

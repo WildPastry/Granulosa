@@ -12,7 +12,7 @@ purge = require('gulp-css-purge');
 gulp.task('autoprefixer', function () {
   return gulp.src('sass/**/*.scss')
       .pipe(postcss([ autoprefixer() ]))
-      .pipe(gulp.dest('./sass'));
+      .pipe(gulp.dest('./prefix'));
 });
 
 // CONCAT
@@ -20,7 +20,7 @@ gulp.task('styles', function () {
   var processors = [
   cssnext({})
   ];
- return gulp.src('sass/**/*.scss')
+ return gulp.src('prefix/**/*.scss')
   .pipe(concat('main'))
   .pipe(sass())
   .pipe(postcss(processors))
@@ -31,7 +31,7 @@ gulp.task('styles', function () {
  });
 
 //  WATCH
- gulp.task('watch', function (event) {
+ gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('sass/**/*.scss', {
 		usePolling: true

@@ -3,6 +3,7 @@
 	padding: $pad;
 	margin: $mar;
 	box-sizing: $box;
-	text-decoration: $deco;
+	-webkit-text-decoration: $deco;
+	        text-decoration: $deco;
 	list-style-type: $listo;
 }
