@@ -12,7 +12,7 @@ purge = require('gulp-css-purge');
 gulp.task('autoprefixer', function () {
   return gulp.src('assets/sass/**/*.scss')
       .pipe(postcss([ autoprefixer() ]))
-      .pipe(gulp.dest('./prefix'));
+      .pipe(gulp.dest('assets/prefix'));
 });
 
 // CONCAT
@@ -26,7 +26,7 @@ gulp.task('styles', function () {
   .pipe(postcss(processors))
   .pipe(purge())
   .pipe(notify("success"))
-  .pipe(gulp.dest('css/'))
+  .pipe(gulp.dest('assets/css/'))
   .pipe(livereload())
  });
 
