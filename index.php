@@ -1,38 +1,38 @@
 <?php
 /**
- * @package Granulosa
+ * index
+ * @package granulosa
  */
+
 get_header(); ?>
 
-<!-- container -->
 <div class='container-fluid'>
 
-  <!-- site-main-content -->
-  <section class='site-main-content'>
+  <!-- content-area -->
+  <section class='content-area content-area-main'>
 
-    <!-- site-bloglist -->
-    <div class='site-bloglist'>
+    <!-- primary-content -->
+    <div class='primary-content'>
 
       <?php  /* start posts if */ if (have_posts()) :
-
         while /* start posts while */ (have_posts()) : the_post();
 
-          get_template_part('content');
+          get_template_part('template-parts/content');
 
         /* end posts while */
         endwhile;
-        the_posts_pagination();
+
+        // the_posts_pagination();
 
       else :
 
-        get_template_part('no-results');
+        get_template_part('template-parts/content', 'none');
 
       /* end posts if */
       endif; ?>
 
-    </div><!-- site-bloglist -->
-
-  </section> <!-- site-main-content -->
+    </div><!-- primary-content -->
+  </section> <!-- content-area -->
 
   <?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
     <div class=' '>
