@@ -16,3 +16,5 @@ require get_template_directory() . '/inc/bootstrap-nav.php';
 // theme support
 require get_template_directory() . '/inc/theme-support.php';
 
+// customiser
+require get_template_directory() . '/inc/customiser.php';

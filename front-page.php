@@ -1,6 +1,6 @@
 <?php
 /**
- * page
+ * front-page
  * @package granulosa
  */
 

@@ -3,9 +3,16 @@
 @import 'mixins';
 
 body {
-  background: #ffffff;
+  background: $white;
 }
 
 * {
   @include reset(0, 0, border-box, none, none);
+}
+
+a {
+  color: $grey;
+  &:hover{
+    color: $red;
+  }
 }
