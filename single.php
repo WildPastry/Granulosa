@@ -11,9 +11,7 @@ get_header(); ?>
 
       <!-- content from template -->
       <div class="row">
-        <?php
-        get_template_part('template-parts/content', get_post_format());
-        ?>
+        <?php get_template_part('template-parts/content', get_post_format()); ?>
       </div><!-- row -->
 
     <?php /* end posts while */ endwhile; ?>

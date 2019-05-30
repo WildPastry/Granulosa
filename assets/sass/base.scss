@@ -3,16 +3,21 @@
 @import 'mixins';
 
 body {
-  background: $white;
+	background: $white;
 }
 
 * {
-  @include reset(0, 0, border-box, none, none);
+	@include reset(0, 0, border-box, none, none);
 }
 
 a {
-  color: $grey;
-  &:hover{
-    color: $red;
-  }
+	color: $grey;
+	&:hover {
+		color: $red;
+	}
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
