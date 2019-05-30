@@ -2,12 +2,19 @@
 @import 'variables';
 @import 'mixins';
 
-body {
-	background: $white;
-}
-
 * {
 	@include reset(0, 0, border-box, none, none);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+	background: $white;
+	display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -19,5 +26,5 @@ a {
 
 .container-fluid {
   max-width: 1200px;
-  margin: 0 auto;
+	flex: 1 0 auto;
 }

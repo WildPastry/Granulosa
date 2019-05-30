@@ -3,7 +3,22 @@
 @import 'mixins';
 
 /* footer */
-/* .footer {
-  max-width: 1200px;
+footer {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
   margin: 0 auto;
-} */
+  height: 80px;
+/*   padding-left: 15px;
+  padding-right: 15px; */
+  width: 100%;
+}
+
+.footerWrap {
+/*   margin-left: 15px;
+  margin-right: 15px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

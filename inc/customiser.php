@@ -7,7 +7,7 @@ add_action('customize_register', 'npl_customize_register');
 function npl_customize_register($wp_customize)
 {
   // REMOVE DEFAULT OPTIONS –––––––––––––––––––––––––––––––––––––––––––––––
-  $wp_customize->remove_section('static_front_page'); // Home Page Settings
+  // $wp_customize->remove_section('static_front_page'); // Home Page Settings
   $wp_customize->remove_section('custom_css'); // Additional CSS
   // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
