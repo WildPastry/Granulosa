@@ -8,14 +8,14 @@ autoprefixer = require('autoprefixer');
 livereload = require('gulp-livereload');
 purge = require('gulp-css-purge');
 
-// AUTOPREFIX
+// autoprefix
 gulp.task('autoprefixer', function () {
   return gulp.src('assets/sass/**/*.scss')
       .pipe(postcss([ autoprefixer() ]))
       .pipe(gulp.dest('assets/prefix'));
 });
 
-// CONCAT
+// concat
 gulp.task('styles', function () {
   var processors = [
   cssnext({})
@@ -30,7 +30,7 @@ gulp.task('styles', function () {
   .pipe(livereload())
  });
 
-//  WATCH
+// watch
  gulp.task('watch', function () {
   livereload.listen();
   gulp.watch('assets/sass/**/*.scss', {
@@ -38,7 +38,7 @@ gulp.task('styles', function () {
   }, gulp.series('autoprefixer', 'styles'));
  });
 
- //LOAD TASKS
+ // load tasks
 gulp.task('default',
 gulp.series('autoprefixer', 'styles', 'watch')
 );

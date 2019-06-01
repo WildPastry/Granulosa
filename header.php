@@ -30,34 +30,34 @@
   <!-- home url -->
   <?php $url = home_url(); ?>
 
+  <!-- logo -->
+  <div class="navWrap">
+    <a class="" title="Granulosa" href="<?php echo $url; ?>">
+      <img src="<?php echo $custom_logo; ?>" />
+    </a>
+  </div>
+
   <!-- nav -->
-  <nav class="navbar navbar-dark navbar-expand-md" role="navigation">
-    <div class="container-fluid">
-      <div class="navWrap">
-
-        <a class="navbar-brand" title="Granulosa" href="<?php echo $url; ?>">
-          <img src="<?php echo $custom_logo; ?>" />
-        </a>
-
+  <nav class="navbar navbar-light navbar-expand-md" role="navigation">
+    <div class="navbarWrap">
+      <div class="navbarTogglerWrap">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <?php
-        wp_nav_menu(array(
-          'theme_location' => 'header_menu',
-          'depth' => 2,
-          'container' => 'div',
-          'container_class' => 'collapse navbar-collapse',
-          'container_id' => 'bs-example-navbar-collapse-1',
-          'menu_class' => 'nav navbar-nav',
-          'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-          'walker' => new WP_Bootstrap_Navwalker(),
-        ));
-        ?>
-
       </div>
-    </div><!-- container -->
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'header_menu',
+        'depth' => 2,
+        'container' => 'div',
+        'container_class' => 'collapse navbar-collapse',
+        'container_id' => 'bs-example-navbar-collapse-1',
+        'menu_class' => 'nav navbar-nav',
+        'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+        'walker' => new WP_Bootstrap_Navwalker(),
+      ));
+      ?>
+    </div><!-- navbarWrap -->
   </nav><!-- nav -->
   <?php
   ?>
