@@ -22,7 +22,7 @@ get_header(); ?>
         /* end posts while */
         endwhile;
 
-        // the_posts_pagination();
+      // the_posts_pagination();
 
       else :
 

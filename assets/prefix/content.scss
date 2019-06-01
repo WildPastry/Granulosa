@@ -3,11 +3,21 @@
 @import 'mixins';
 
 /* content */
-.content-area{
-  margin: 2em 0;
+.content-area {
+	margin: 2em 0;
 }
 
 /* img */
-.singlePostImg{
-  width: 100%;
+/* single post img */
+.singlePostImg {
+	width: 100%;
+}
+
+/* thumbnail img */
+.thumbnailWrap {
+  margin-bottom: 20px;
+}
+
+.thumbnailImg {
+	height: 400px;
 }
