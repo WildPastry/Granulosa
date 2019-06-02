@@ -14,16 +14,12 @@ $thumbnailImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
   <!-- thumbnail image -->
   <div class="thumbnailWrap">
-    <div class="row">
-      <div class="col-12">
-        <?php /* start thumbnail if */ if (has_post_thumbnail()) : ?>
-          <?php echo '<div class="thumbnailImg" style="background-image: url(' . $thumbnailImg . ');background-position: center; background-size: cover;  background-repeat: no-repeat;"></div>';
-        else :
-          echo '<div class="thumbnailImg" style="background-image: url(' . $defaultThumb . ');background-position: center; background-size: cover;  background-repeat: no-repeat;"></div>';
-          ?>
-        <?php /* end thumbnail if */ endif; ?>
-      </div>
-    </div><!-- row -->
+    <?php /* start thumbnail if */ if (has_post_thumbnail()) : ?>
+      <?php echo '<div class="thumbnailImg" style="background-image: url(' . $thumbnailImg . ');background-position: center; background-size: cover;  background-repeat: no-repeat;"></div>';
+    else :
+      echo '<div class="thumbnailImg" style="background-image: url(' . $defaultThumb . ');background-position: center; background-size: cover;  background-repeat: no-repeat;"></div>';
+      ?>
+    <?php /* end thumbnail if */ endif; ?>
   </div><!-- thumbnailWrap -->
 
   <!-- title - date - comments -->
@@ -39,9 +35,7 @@ $thumbnailImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
         <?php /* end post type if */ endif; ?>
       </header>
     </div>
-  </div><!-- row -->
 
-  <div class="row">
     <div class="col-12">
       <?php the_content(); ?>
     </div>

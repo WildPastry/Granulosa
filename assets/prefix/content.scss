@@ -4,21 +4,32 @@
 
 /* container –––––––––––––––––––––––––– */
 .container-fluid {
-  max-width: 1200px;
+	max-width: 1200px;
 	flex: 1 0 auto;
 }
 
 /* content –––––––––––––––––––––––––––– */
 .content-area {
-	margin: 2em 0;
+	margin: 20px 0;
 }
 
 /* single content */
- .content-area-single {
-	 margin: 2em auto;
- }
- 
- /* img –––––––––––––––––––––––––––––––– */ 
+.content-area-single {
+	margin: 20px auto;
+}
+
+/* img –––––––––––––––––––––––––––––––– */
+/*  featured img */
+.featuredImgWrap {
+	width: 100%;
+	height: 500px;
+	margin-bottom: 20px;
+}
+
+.featuredImg {
+	height: 500px;
+}
+
 /* single post img */
 .singlePostImg {
 	width: 100%;
@@ -26,9 +37,15 @@
 
 /* thumbnail img */
 .thumbnailWrap {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
+	width: 100%;
 }
 
 .thumbnailImg {
 	height: 400px;
+}
+
+/* cards –––––––––––––––––––––––––––––– */
+.card {
+	margin-bottom: 20px;
 }
