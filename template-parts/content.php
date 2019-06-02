@@ -37,7 +37,9 @@ $thumbnailImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
     </div>
 
     <div class="col-12">
-      <?php the_content(); ?>
+      <article>
+        <?php the_content(); ?>
+      </article>
     </div>
   </div><!-- row -->
 

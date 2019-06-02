@@ -24,6 +24,20 @@
 	max-width: 600px;
 }
 
+.single-row a {
+	color: $red;
+}
+.single-row article {
+	column-count: 1;
+}
+
+/* article –––––––––––––––––––––––––––– */
+article{
+	column-count: 2;
+	column-gap: 3em;
+	column-rule: 1px solid $light-grey;
+}
+
 /* img –––––––––––––––––––––––––––––––– */
 /*  featured img */
 .featuredImgWrap {
@@ -54,4 +68,11 @@
 /* cards –––––––––––––––––––––––––––––– */
 .card {
 	margin-bottom: 20px;
+}
+
+/* media –––––––––––––––––––––––––––––– */
+@media (max-width: 576px) {
+	article{
+		column-count: 1;
+	}
 }

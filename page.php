@@ -36,6 +36,7 @@ get_header(); ?>
     </div><!-- primary-content -->
   </section> <!-- main content-area -->
 </div><!-- container -->
+
 <?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
   <div class=' '>
     <div class=' '>

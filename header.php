@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Granulosa | <?php the_title(); ?></title>
   <?php wp_head(); ?>
-</head>
+</head><!-- head -->
 
 <body <?php body_class(); ?>>
 
@@ -35,7 +35,7 @@
     <a class="" title="Granulosa" href="<?php echo $url; ?>">
       <img src="<?php echo $custom_logo; ?>" />
     </a>
-  </div>
+  </div><!-- logo -->
 
   <!-- nav -->
   <nav class="navbar navbar-light navbar-expand-md" role="navigation">
@@ -44,7 +44,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
+      </div><!-- navbarTogglerWrap -->
       <?php
       wp_nav_menu(array(
         'theme_location' => 'header_menu',
@@ -59,5 +59,8 @@
       ?>
     </div><!-- navbarWrap -->
   </nav><!-- nav -->
+
+  <!-- master container -->
+  <div class="container-fluid">
   <?php
   ?>

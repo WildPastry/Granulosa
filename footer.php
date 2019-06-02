@@ -12,6 +12,8 @@ if (has_nav_menu('footer_menu')) {
   ));
 } ?>
 
+</div><!-- container-fluid -->
+
 <footer class="footer">
   <div class="container-fluid">
     <div class="footerWrap">
@@ -21,7 +23,7 @@ if (has_nav_menu('footer_menu')) {
       <p class="">Material &copy; <a href='http://gctf.org.nz/index.htm' target='_blank'>GCTRF</a></p>
     </div>
   </div>
-</footer>
+</footer><!-- footer -->
 
 <?php wp_footer(); ?>
 </body>
