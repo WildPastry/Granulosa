@@ -6,12 +6,12 @@
 add_action('customize_register', 'npl_customize_register');
 function npl_customize_register($wp_customize)
 {
-  // REMOVE DEFAULT OPTIONS –––––––––––––––––––––––––––––––––––––––––––––––
+  // remove default options –––––––––––––––––––––––––––––––––––––––––––––––
   // $wp_customize->remove_section('static_front_page'); // Home Page Settings
   $wp_customize->remove_section('custom_css'); // Additional CSS
   // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-  // CREATE HOMEPAGE PANEL ––––––––––––––––––––––––––––––––––––––––––––––––
+  // create homepage panel ––––––––––––––––––––––––––––––––––––––––––––––––
   $wp_customize->add_panel('homepage_panel', array(
     'title'      => __('Home Page Content', 'granulosa'),
     'priority'   => 10,
@@ -19,16 +19,16 @@ function npl_customize_register($wp_customize)
   ));
   // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-  // CREATE COLOURS PANEL ––––––––––––––––––––––––––––––––––––––––––––––––
+  // create colours panel –––––––––––––––––––––––––––––––––––––––––––––––––
   $wp_customize->add_panel('site_colours_panel', array(
     'title'      => __('Site Colours', 'granulosa'),
     'priority'   => 15,
     'description' => 'Edit the site colours'
   ));
-  // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-  // COLOURS –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  // BACKGROUND
+  // colours –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  // background
   $wp_customize->add_section('background_colour_section', array(
     'title'      => __('Background colour', 'granulosa'),
     'priority'   => 10,
@@ -50,7 +50,7 @@ function npl_customize_register($wp_customize)
     )
   ));
 
-  // PARAGRAPH TEXT
+  // paragraph text
   $wp_customize->add_section('paragraph_colour_section', array(
     'title'      => __('Body text', 'granulosa'),
     'priority'   => 15,
@@ -72,7 +72,7 @@ function npl_customize_register($wp_customize)
     )
   ));
 
-  // HEADER AND FOOTER
+  // header and footer
   $wp_customize->add_section('bar_colour_section', array(
     'title'      => __('Header and footer', 'granulosa'),
     'priority'   => 20,
@@ -93,22 +93,55 @@ function npl_customize_register($wp_customize)
       'settings'   => 'bar_colour_setting',
     )
   ));
-}
 
-// CSS FOR COLOURS PANEL –––––––––––––––––––––––––––––––––––––––––––––––––
+  // featured posts ––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  // $wp_customize->add_section('front_page_section', array(
+  //   'title'      => __('Front Page Info', 'granulosa'),
+  //   'priority'   => 25,
+  // ));
+
+  // $wp_customize->add_setting('featured-post-setting', array(
+  //   'default'   => ' ',
+  //   'transport' => 'refresh',
+  // ));
+
+  // $args = array(
+  //   'posts_per_page' => -1
+  // );
+
+  // $allPosts = get_posts($args);
+
+  // $options = array();
+  // $options[''] = 'Please select a post';
+  // foreach ($allPosts as $singlePost) {
+  //   $options[$singlePost->ID] = $singlePost->post_title;
+  // }
+
+  // $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'featured-post-control', array(
+  //   'label'      => __('Featured Post', 'granulosa'),
+  //   'section'    => 'front_page_section',
+  //   'settings'   => 'featured-post-setting',
+  //   'type'       => 'select',
+  //   'choices' => $options
+  // )));
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+} // end of customiser function
+
+// css for colours panel –––––––––––––––––––––––––––––––––––––––––––––––––
 add_action('wp_head', 'granulosa_customize_css');
 function granulosa_customize_css()
 {
   ?>
   <style type="text/css">
-    /* BACKGROUND */
+    /* background */
     body {
       background-color:
         <?php echo get_theme_mod('background_colour_setting', '#fff');
         ?>;
     }
 
-    /* PARAGRAPH TEXT */
+    /* paragraph text */
     p,
     li {
       color:
@@ -116,7 +149,7 @@ function granulosa_customize_css()
         ?>;
     }
 
-    /* HEADER AND FOOTER */
+    /* header and footer */
     .navbar,
     .footer {
       background-color:

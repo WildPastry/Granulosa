@@ -1,21 +1,46 @@
 <?php
 /**
+ * single
  * @package granulosa
  */
+
 get_header(); ?>
 
-<div class="container-fluid">
+<div class='container-fluid'>
 
-  <?php  /* start posts if */ if (have_posts()) : ?>
-    <?php  /* start posts while */ while (have_posts()) : the_post() ?>
+  <!-- main content-area -->
+  <section class='content-area content-area-main'>
 
-      <!-- content from template -->
-      <div class="row">
-        <?php get_template_part('template-parts/content', get_post_format()); ?>
-      </div><!-- row -->
+    <!-- primary-content -->
+    <div class='primary-content'>
 
-    <?php /* end posts while */ endwhile; ?>
-  <?php /* end posts if */ endif; ?>
+      <?php  /* start posts if */ if (have_posts()) :
+        while /* start posts while */ (have_posts()) : the_post();
+
+          get_template_part('template-parts/content');
+
+        /* end posts while */
+        endwhile;
+
+      // the_posts_pagination();
+
+      else :
+
+        get_template_part('template-parts/content', 'none');
+
+      /* end posts if */
+      endif; ?>
+
+    </div><!-- primary-content -->
+  </section> <!-- main content-area -->
+
+  <?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
+    <div class=' '>
+      <div class=' '>
+        <?php dynamic_sidebar(' '); ?>
+      </div>
+    </div>
+  <?php /* end sidebar if */ endif; ?>
 
 </div><!-- container -->
 

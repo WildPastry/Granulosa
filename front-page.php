@@ -6,42 +6,44 @@
 
 get_header(); ?>
 
-<div class='container-fluid'>
+<!-- main content-area -->
+<section class='content-area content-area-main'>
 
-  <!-- content-area -->
-  <section class='content-area content-area-main'>
+  <!-- primary-content -->
+  <div class='primary-content'>
 
-    <!-- primary-content -->
-    <div class='primary-content'>
+    <div class='container-fluid'>
+      <div class="row">
 
-      <?php  /* start posts if */ if (have_posts()) :
-        while /* start posts while */ (have_posts()) : the_post();
+        <?php  /* start posts if */ if (have_posts()) :
+          while /* start posts while */ (have_posts()) : the_post();
 
-          get_template_part('template-parts/content');
+            get_template_part('template-parts/content');
 
-        /* end posts while */
-        endwhile;
+          /* end posts while */
+          endwhile;
 
-      // the_posts_pagination();
+        // the_posts_pagination();
 
-      else :
+        else :
 
-        get_template_part('template-parts/content', 'none');
+          get_template_part('template-parts/content', 'none');
 
-      /* end posts if */
-      endif; ?>
+        /* end posts if */
+        endif; ?>
 
-    </div><!-- primary-content -->
-  </section> <!-- content-area -->
+      </div><!-- row -->
+    </div><!-- container -->
 
-  <?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
+  </div><!-- primary-content -->
+</section> <!-- main content-area -->
+
+<?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
+  <div class=' '>
     <div class=' '>
-      <div class=' '>
-        <?php dynamic_sidebar(' '); ?>
-      </div>
+      <?php dynamic_sidebar(' '); ?>
     </div>
-  <?php /* end sidebar if */ endif; ?>
-
-</div><!-- container -->
+  </div>
+<?php /* end sidebar if */ endif; ?>
 
 <?php get_footer(); ?>

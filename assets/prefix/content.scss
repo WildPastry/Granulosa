@@ -2,12 +2,17 @@
 @import 'variables';
 @import 'mixins';
 
-/* content */
+/* content –––––––––––––––––––––––––––– */
 .content-area {
 	margin: 2em 0;
 }
 
-/* img */
+/* single content */
+ .content-area-single {
+	 margin: 2em auto;
+ }
+ 
+ /* img –––––––––––––––––––––––––––––––– */ 
 /* single post img */
 .singlePostImg {
 	width: 100%;
