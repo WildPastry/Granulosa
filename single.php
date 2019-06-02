@@ -20,8 +20,6 @@ get_header(); ?>
           /* end posts while */
           endwhile;
 
-        // the_posts_pagination();
-
         else :
 
           get_template_part('template-parts/content', 'none');
