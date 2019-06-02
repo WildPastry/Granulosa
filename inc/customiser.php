@@ -7,8 +7,13 @@ add_action('customize_register', 'npl_customize_register');
 function npl_customize_register($wp_customize)
 {
   // remove default options –––––––––––––––––––––––––––––––––––––––––––––––
-  // $wp_customize->remove_section('static_front_page'); // Home Page Settings
-  $wp_customize->remove_section('custom_css'); // Additional CSS
+  // $wp_customize->remove_section('installed_themes'); // Themes // 0
+  // $wp_customize->remove_section('title_tagline'); // Site Identity // 20
+  $wp_customize->remove_section('colors'); // Colours // 40
+  // $wp_customize->remove_section('header_image'); // Header Image // 60
+  // $wp_customize->remove_section('background_image'); // Background Image // 80
+  $wp_customize->remove_section('static_front_page'); // Home Page Settings // 120
+  $wp_customize->remove_section('custom_css'); // Additional CSS // 200
   // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
   // create homepage panel ––––––––––––––––––––––––––––––––––––––––––––––––
@@ -93,6 +98,28 @@ function npl_customize_register($wp_customize)
       'settings'   => 'bar_colour_setting',
     )
   ));
+
+  // custom intro ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  $wp_customize->add_section('custom_intro_section', array(
+    'title'      => __('Custom intro text', 'granulosa'),
+    'priority'   => 80
+  ));
+
+  $wp_customize->add_setting('custom_intro_setting', array(
+    'default'   => 'Welcome to Granulosa',
+    'transport' => 'refresh',
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control(
+    $wp_customize,
+    'custom_intro_control',
+    array(
+      'label'      => __('Change custom intro text', 'granulosa'),
+      'section'    => 'title_tagline',
+      'settings'   => 'custom_intro_setting',
+    )
+  ));
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
   // featured posts ––––––––––––––––––––––––––––––––––––––––––––––––––––––
   // $wp_customize->add_section('front_page_section', array(

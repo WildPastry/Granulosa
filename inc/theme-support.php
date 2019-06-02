@@ -10,8 +10,9 @@ function granulosa_add_theme_support()
 {
   add_theme_support('post-thumbnails');
   add_theme_support('wp-block-styles');
-  add_theme_support('custom-header');
   add_theme_support('post-formats', array('text', 'image'));
+  add_theme_support('custom-header'); // Header Image // Customiser
+  // add_theme_support('custom-background'); // Background Image // Customiser
 
   // add default size for custom logo
   $defaults = array(
@@ -19,7 +20,7 @@ function granulosa_add_theme_support()
     'flex-width'  => true
   );
   // add custom logo to theme support
-  add_theme_support('custom-logo', $defaults);
+  add_theme_support('custom-logo', $defaults); // Site Identity // Customiser
 }
 
 // remove the ability to edit code from the apperance menu

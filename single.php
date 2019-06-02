@@ -9,12 +9,9 @@ get_header(); ?>
 <div class='container-fluid'>
   
   <!-- main content-area -->
-  <section class='content-area content-area-main'>
+  <section class='content-area content-area-single'>
 
-    <!-- primary-content -->
-    <div class='primary-content'>
-
-      <div class="row">
+      <div class="row single-row">
         <?php  /* start posts if */ if (have_posts()) :
           while /* start posts while */ (have_posts()) : the_post();
 
@@ -33,8 +30,8 @@ get_header(); ?>
         endif; ?>
       </div><!-- row -->
 
-    </div><!-- primary-content -->
   </section> <!-- main content-area -->
+
 </div><!-- container -->
 <?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
   <div class=' '>

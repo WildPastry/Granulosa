@@ -25,11 +25,15 @@ a {
 	}
 }
 
+footer p {
+	margin: 0;
+}
+
 h1 {
 	text-transform: uppercase;
 	color: $red;
-	font-size: 3em;
-	font-weight: 500;
+	font-size: 2em;
+	font-weight: 700;
 	text-align: center;
 	margin: 20px 0;
 }

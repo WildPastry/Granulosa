@@ -7,11 +7,20 @@
 // get header image
 $defaultHead = get_template_directory_uri() . '/assets/img/default-head.jpg';
 $featuredImg = get_header_image();
+
+// get custom intro text
+$customText = get_theme_mod('custom_intro_setting');
+$defaultText = 'Welcome to Granulosa';
+
 get_header(); ?>
 
 <div class='container-fluid'>
 
-  <h1 class='intro'>Welcome to Granulosa</h1>
+  <?php if ($customText == "") : echo '<h1>' . $defaultText . '</h1>';
+  else :
+    echo '<h1>' . $customText . '</h1>';
+  endif;
+  ?>
 
   <!-- main content-area -->
   <section class='content-area content-area-main'>
