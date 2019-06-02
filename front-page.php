@@ -6,15 +6,17 @@
 
 get_header(); ?>
 
-<!-- main content-area -->
-<section class='content-area content-area-main'>
+<div class='container-fluid'>
 
-  <!-- primary-content -->
-  <div class='primary-content'>
+<h1 class='intro'>Welcome to Granulosa</h1>
 
-    <div class='container-fluid'>
+  <!-- main content-area -->
+  <section class='content-area content-area-main'>
+
+    <!-- primary-content -->
+    <div class='primary-content'>
+
       <div class="row">
-
         <?php  /* start posts if */ if (have_posts()) :
           while /* start posts while */ (have_posts()) : the_post();
 
@@ -31,13 +33,11 @@ get_header(); ?>
 
         /* end posts if */
         endif; ?>
-
       </div><!-- row -->
-    </div><!-- container -->
 
-  </div><!-- primary-content -->
-</section> <!-- main content-area -->
-
+    </div><!-- primary-content -->
+  </section> <!-- main content-area -->
+</div><!-- container -->
 <?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
   <div class=' '>
     <div class=' '>

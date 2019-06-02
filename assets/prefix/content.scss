@@ -2,6 +2,12 @@
 @import 'variables';
 @import 'mixins';
 
+/* container –––––––––––––––––––––––––– */
+.container-fluid {
+  max-width: 1200px;
+	flex: 1 0 auto;
+}
+
 /* content –––––––––––––––––––––––––––– */
 .content-area {
 	margin: 2em 0;

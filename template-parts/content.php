@@ -49,7 +49,7 @@ $thumbnailImg = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
 <?php /* else */ else : ?>
 
-  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-4">
+  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
     <div class="card">
       <?php /* start thumbnail if */ if (has_post_thumbnail()) : ?>
         <?php the_post_thumbnail('thumbnail', ['class' => 'card-img-top img-fluid', 'alt' => 'image from post']) ?>
