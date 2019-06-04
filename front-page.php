@@ -61,12 +61,4 @@ get_header(); ?>
 
 </div><!-- container -->
 
-<?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
-  <div class=' '>
-    <div class=' '>
-      <?php dynamic_sidebar(' '); ?>
-    </div>
-  </div>
-<?php /* end sidebar if */ endif; ?>
-
 <?php get_footer(); ?>

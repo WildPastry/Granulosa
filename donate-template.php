@@ -1,13 +1,13 @@
 <?php
 /**
- * page
+ * Template Name: Donate
  * @package granulosa
  */
 
 get_header(); ?>
 
 <div class='container-fluid'>
-  
+
   <!-- main content-area -->
   <section class='content-area content-area-main'>
 
@@ -19,6 +19,8 @@ get_header(); ?>
           while /* start posts while */ (have_posts()) : the_post();
 
             get_template_part('template-parts/content');
+
+            get_template_part('form');
 
           /* end posts while */
           endwhile;

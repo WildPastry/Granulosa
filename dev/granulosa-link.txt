@@ -1,0 +1,1 @@
+cd /vagrant/www/granulosa/wp-content/themes/granulosa

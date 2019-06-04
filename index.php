@@ -45,8 +45,6 @@ get_header(); ?>
           /* end posts while */
           endwhile;
 
-        // the_posts_pagination();
-
         else :
 
           get_template_part('template-parts/content', 'none');
@@ -60,13 +58,5 @@ get_header(); ?>
   </section> <!-- main content-area -->
 
 </div><!-- container -->
-
-<?php  /* start sidebar if */ if (is_active_sidebar(' ')) : ?>
-  <div class=' '>
-    <div class=' '>
-      <?php dynamic_sidebar(' '); ?>
-    </div>
-  </div>
-<?php /* end sidebar if */ endif; ?>
 
 <?php get_footer(); ?>

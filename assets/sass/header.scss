@@ -71,6 +71,10 @@
 	}
 }
 
+.active {
+	border-bottom: 3px solid $red;
+}
+
 // media
 @media (max-width: 768px) {
 	.navbarWrap {
