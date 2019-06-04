@@ -9,6 +9,7 @@ Granulosa is a custom Wordpress theme, coded from scratch for educational purpos
 ## Plugins
 
 **AllInOne**
+**Which Template**
 
 ## Development info
 
