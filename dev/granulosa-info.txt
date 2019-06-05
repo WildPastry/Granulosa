@@ -1,9 +1,0 @@
-http://gctf.org.nz/index.htm
-
-change slug - URL
-font / layout
-redesign - clear
-add images
-remove un-necessary links
-3 pages - home - donate - about
-better logo
