@@ -1,9 +1,5 @@
 # Granulosa
 
-Custom wordpress theme
-
-## Features
-
 Granulosa is a custom Wordpress theme, coded from scratch for educational purposes.
 
 ## Plugins
@@ -11,10 +7,10 @@ Granulosa is a custom Wordpress theme, coded from scratch for educational purpos
 **AllInOne** <br>
 **Which Template**
 
-## Development info
+## Development
 
-**SASS** <br>
-**GULP** <br>
-**Post CSS** <br>
-**Autoprefixer** <br>
-**PHP** <br>
+* **SASS** <br>
+* **Gulp** <br>
+* **Post CSS** <br>
+* **Autoprefixer** <br>
+* **PHP** <br>
